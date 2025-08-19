@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Page not found</title>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="card">
+                <h1 class="big">404</h1>
+                <h2>Oops! That page doesn't exist.</h2>
+                <p>The link may be broken, or the page may have been removed.</p>
+                <a class="btn" href="{% url 'home' %}">Go to Homepage</a>
+            </div>
+        </div>
+    </body>
+</html>
