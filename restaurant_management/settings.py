@@ -134,4 +134,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-RESTAURANT_NAME= "Neture's Plate"
+RESTAURANT_NAME= "Nature's Plate"
