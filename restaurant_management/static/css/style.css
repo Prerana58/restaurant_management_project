@@ -1,0 +1,13 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3{
+    color: rgb(103, 227, 252);
+}
+.btn-warning{
+    background-color: #e67e22;
+    border: none;
+}
+.btn-warning:hover{
+    background-color: #d35400;
+}
