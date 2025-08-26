@@ -4,10 +4,6 @@ from django.shortcuts import render
 def about(request):
     return render(request, "home/about.html")
 
-def home(request):
-    restaurant=Restaurant.objects.first()
-    context={
-        "restaurant_name":
-        restaurant.name if restaurant else "Our Restaurant"
-    }
-    return render(request, "home/index.html", context)
+def index(request):
+    restaurant_name=getattr(settings, "RESTAURANT_NAME", "My Restaurant")
+    return render(request, "home/index.html", {"restaurant_name":restaurant_name})
