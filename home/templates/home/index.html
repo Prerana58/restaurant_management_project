@@ -4,11 +4,10 @@
 {{ restaurant_name }}{% endblock %}
 
 {% block content %}
-<div style="display: flex;
-flex-direction: column; align-items: center; justify-contet: center; min-height: 80vh; text-align: enter; background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
-padding: 2rem; border-radious: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1)">
-    <h1 style="font-size: 3rem; font_weight: bold; color: #2c3ee50; margin-bottom: 1rem;">Welcome to {{ restaurant_name }}</h1>
+<div class="container">
+    <h1>Welcome to {{ restaurant_name }}</h1>
     <p>Delicious food made with love.</p>
     <p>We are glad to serve you the best food in town!</p>
+    <a href="{% url 'product:list' %}" class="btn">Explore Our Menu</a>
 </div>
 {% endblock %}
