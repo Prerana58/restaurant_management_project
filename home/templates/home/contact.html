@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block title %}Contact Us- {{ restaurant_name }}{% endblock %}
 {% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css'%}">
 <div class="container">
     <h1>Contact Us</h1>
     <p>If you have any question, feel free to reach out!</p>
