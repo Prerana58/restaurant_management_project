@@ -81,3 +81,40 @@ p{
 .contact-info{
     color: #e67e22;
 }
+.menu-container{
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.menu-container h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+.menu-list{
+    list-style: none;
+    padding: 0;
+}
+.menu-item{
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+.menu-item:last-child{
+    border-bottom: none;
+}
+.menu-item h2{
+    margin: 0;
+    font-size: 1.3rem;
+    color: #34495e;
+}
+.menu-item .price{
+    color: #e67e22;
+    font-weight: bold;
+}
+.menu-item p{
+    margin: 5px 0 0;
+    color: #555;
+}
