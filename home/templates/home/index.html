@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %}Home -
+{% block title %}Welcome -
 {{ restaurant_name }}{% endblock %}
 
 {% block content %}
-<div class="container">
-    <h1>Welcome to {{ restaurant_name }}</h1>
-    <p>Delicious food made with love.</p>
-    <p>We are glad to serve you the best food in town!</p>
+{% load static %}
+<div class="home-container">
+    <h1>Welcome to <span class="home-highlight">{{ restaurant_name }}</span></h1>
+    <p>Delicious food made with love. Experience the finest dishes crafted with passion and fresh ingredients.</p>
+    <p>We bring you flavours from around the world, served with love.We are glad to serve you the best food in town!
+        Come and enjoy an unforgettable dining experience with us.
+    </p>
     <a href="{% url 'product:list' %}" class="btn">Explore Our Menu</a>
 </div>
 {% endblock %}
