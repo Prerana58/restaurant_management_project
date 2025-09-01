@@ -1,12 +1,15 @@
 from django.shortcuts import render
 
 # Create your views here.
+def homepage_view(request):
+    context={
+        "restaurant_name":settings.RESTAURANT_NAME,
+        "restaurant_phone":settings.RESTAURANT_PHONE,
+    }
+    return render(request, "home/index.html", context)
+    
 def about(request):
     return render(request, "home/about.html")
-
-def index(request):
-    restaurant_name=getattr(settings, "RESTAURANT_NAME", "My Restaurant")
-    return render(request, "home/index.html", {"restaurant_name":restaurant_name})
 
 def contact(request):
     restaurant_name=getattr(settings, "RESTAURANT_NAME", "My Restaurant")
