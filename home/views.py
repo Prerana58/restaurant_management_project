@@ -9,4 +9,5 @@ def index(request):
     return render(request, "home/index.html", {"restaurant_name":restaurant_name})
 
 def reservations(request):
-    return render(request,'reservations.html')
+    context={ "current_year": datetime.now().year}
+    return render(request,'reservations.html', context)
