@@ -11,12 +11,15 @@
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'about' %}">About Us</a></li>
-                <li><a href="{% url 'contact'%}">Contact Us</a></li>
 
             </ul>
         </nav>
         <div class="content">
             {% block content %}{% endblock %}
         </div>
+        <footer>
+            <hr>
+            <p>&copy; {{ current_year } Natures Plate. All rights reserved.</p>
+        </footer>
     </body>
 </html>
