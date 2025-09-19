@@ -135,4 +135,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 RESTAURANT_NAME= "Nature's Plate"
-RESTAURANT_PHONE= "+91-9876543210"
