@@ -9,5 +9,10 @@ def index(request):
     return render(request, "home/index.html", {"restaurant_name":restaurant_name})
 
 def reservations(request):
-    context={ "current_year": datetime.now().year}
-    return render(request,'reservations.html', context)
+    try:
+        context={ "current_year": datetime.now().year}
+        return render(request,'reservations.html', context)
+    except Exception as e:
+        print(f"Error in reservations view: {e}")
+        return HttpResponseSereverError("An error occured while loading he reservations page.")
+    
