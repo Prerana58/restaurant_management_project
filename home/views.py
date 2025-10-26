@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from rest_framework.generics import ListAPIView
+from .models import MenuCategory
+from .serializers import MenuCategorySerializer
 
 # Create your views here.
 def about(request):
@@ -16,3 +19,6 @@ def reservations(request):
         print(f"Error in reservations view: {e}")
         return HttpResponseSereverError("An error occured while loading he reservations page.")
     
+class MenuCategoryListView:
+    queryset=MenuCategory.objects.all()
+    serializer_class=MenuCategorySerializer
