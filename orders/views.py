@@ -24,3 +24,10 @@ class CouponValidationView(APIView):
         return Response({'success':'True',
         'discount_percentage':coupon.discount_percentage,
         'message':f'Coupon{coupon.code} applied successfully!'},status=status.HTTP_200_OK)
+
+    class OrderHistorView(generics.ListAPIView):
+        serializer_class=OrderSerializr
+        permission_classes=[permissions.IsAuthoticated]
+
+        def get_queryset(self):
+            return Order.objects.filter(user=self.request.user).order_by('-created_at')
