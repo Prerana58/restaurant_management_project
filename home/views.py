@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework.generics import ListAPIView
 from .models import MenuCategory
 from .serializers import MenuCategorySerializer
+from .serializers import MenuItemSerializer
 
 # Create your views here.
 def about(request):
@@ -22,3 +23,10 @@ def reservations(request):
 class MenuCategoryListView:
     queryset=MenuCategory.objects.all()
     serializer_class=MenuCategorySerializer
+
+class FeaturedMenuItemsView(generics.ListAPIView):
+    serializer_class=MenuItemSerializer
+    def get_queryset(self):
+        return MenuItem.objects.filter(is_featured=True, is_available=True)
+
+
