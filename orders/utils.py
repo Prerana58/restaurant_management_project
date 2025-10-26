@@ -8,3 +8,8 @@ def generate_coupon_code(length=10):
 
         if not Coupon.objects.filter(code=code).exists():
             return code
+
+def get_daily_sales_total(specific_date:date):
+    orders=Order.objects.filter(created_at__date=specific_date)
+    total=orders.aggregate(total_sum=Sum('total_price'))['total_sum']
+    return total or 0
